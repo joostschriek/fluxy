@@ -1,0 +1,4 @@
+namespace: windows
+bases:
+- github.com/ahanafy/windows-kustomize/windows/base?ref=v1.0.0
+- github.com/ahanafy/windows-kustomize/windows/networking?ref=v1.0.0

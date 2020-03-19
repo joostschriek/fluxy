@@ -1,0 +1,10 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+bases:
+- github.com/ahanafy/cluster-base/base?ref=v0.2.0
+- github.com/ahanafy/cluster-base/istio-system?ref=v0.2.0
+- github.com/ahanafy/cluster-base/cert-manager?ref=v0.2.0
+- bookinfo-team
+- windows-team
+patchesStrategicMerge:
+- flux-patch.yaml

@@ -1,0 +1,22 @@
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: fluxcd
+  namespace: fluxcd
+spec:
+  releaseName: fluxcd
+  chart:
+    repository: https://charts.fluxcd.io
+    version: 1.2.0
+    name: flux
+  values:
+    replicaCount: 1
+    git:
+      url: 'git@github.com:ahanafy/flux-template'
+      branch: 'master'
+      pollInterval: '1m'
+      readonly: true
+      name: 'Fluxcd Operator flux-template'
+    manifestGeneration: true
+    registry:
+      pollInterval: '1m'
