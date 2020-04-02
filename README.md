@@ -19,6 +19,14 @@ Download Instructions: https://github.com/helm/helm/releases
 Download Instructions: https://github.com/bitnami-labs/sealed-secrets/releases
 ```
 
+### **Create the clusterrolebinding for flux**
+
+```
+kubectl create clusterrolebinding "cluster-admin-flux" \
+    --clusterrole=cluster-admin \
+    --user="$(gcloud config get-value core/account)"
+```
+
 ### **Update the template address**
 
 Note that fluxcd works better with a ssh url.
@@ -27,7 +35,6 @@ $ sed -i.bak 's/git@github.com:ahanafy\/flux-template/<your git repo>/' flux-pat
 ```
 
 ## **Deploy**
-
 When running in GKE, we have to setup a clusterrolebinding. This can be done by running
 ```
 ./scripts/flux-gke-prep.sh
