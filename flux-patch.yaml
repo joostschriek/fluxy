@@ -12,7 +12,7 @@ spec:
   values:
     replicaCount: 1
     git:
-      url: 'git@github.com:ahanafy/flux-template'
+      url: 'git@github.com:joostschriek/fluxy.git'
       branch: 'master'
       pollInterval: '1m'
       readonly: true
