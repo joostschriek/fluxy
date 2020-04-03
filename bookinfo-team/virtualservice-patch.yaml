@@ -1,0 +1,7 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: bookinfo
+spec:
+  hosts:
+  - "bookinfo.104.154.195.203.xip.io"

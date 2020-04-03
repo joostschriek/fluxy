@@ -2,3 +2,5 @@ namespace: bookinfo
 bases:
 - github.com/ahanafy/bookinfo-kustomize/bookinfo/base?ref=v1.0.0
 - github.com/ahanafy/bookinfo-kustomize/bookinfo/networking?ref=v1.0.0
+patchesStrategicMerge:
+  - virtualservice-patch.yaml
