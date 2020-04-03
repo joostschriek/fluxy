@@ -1,0 +1,5 @@
+namespace: sas-team
+bases:
+- github.com/ahanafy/sas-deploy?ref=master
+patchesStrategicMerge:
+  - virtualservice-patch.yaml
